@@ -4,16 +4,21 @@
 
 WORK IN PROGRESS
 
-This project is a solution to the Udacity Deep Reinforcement Learning nanodegree project 1 (https://github.com/udacity/deep-reinforcement-learning/tree/master/p1_navigation). 
+This project is a solution to the Udacity Deep Reinforcement Learning nanodegree project 3 (https://github.com/udacity/deep-reinforcement-learning/tree/master/p3_collab-compet). 
 
-The environment's state space is continous and 37-dimensional. The action is discrete with 4 actions.
+In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play.
 
-According to the project spec, the environment is considered solved if the agent is able to receive an average reward (over 100 episodes) of at least 13.
+The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
+
+The task is episodic, and in order to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically,
+
+After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores.
+This yields a single score for each episode.
+The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
 My implementation of an agent solving the environment is found in in `ddpg_agent.py` and `model.py` in the root directory.
 
- It is heavily based on the exercise code from lesson 2.2 Deep-Q-Learning of the respective Udacity nanodegree  (https://github.com/udacity/deep-reinforcement-learning/tree/master/dqn/solution).
-
+It is heavily based on the DDPG bipedal walker example from the respective Udacity nanodegree Github repository  (https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-bipedal).
 
 
 ## Getting Started
