@@ -55,7 +55,9 @@ class Agent():
 
         # Replay memory
         self.memory = ReplayBuffer(action_size, BUFFER_SIZE, BATCH_SIZE, random_seed)
+        
         self.count = 0
+        
         self.exploration_scale = 1.0
     
     def step(self, state, action, reward, next_state, done):
